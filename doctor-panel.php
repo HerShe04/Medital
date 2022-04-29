@@ -228,7 +228,7 @@ button:hover {
 
                     $query = "select pid,fname,lname,ID,appdate,apptime,disease,allergy,prescription from prestb where doctor='$doctor';";
                     
-                    $result = mysqli_query($con,$query);
+                    $result = mysqli_query($con,$query );
                     if(!$result){
                       echo mysqli_error($con);
                     }
@@ -244,14 +244,15 @@ button:hover {
                                     <td><?php echo $row['disease'];?></td>
                                     <td><?php echo $row['allergy'];?></td>
                                     <td><?php echo $row['prescription'];?></td>
-                                    <button class="btn btn-dark"
-                                        style="position:absolute; top:58px; left:54em;">Generate</button></a>
+                                    <input type="submit" value="Generate" class="btn btn-dark" onclick="generateqr()">
+
 
                                 </tr>
                                 <?php $cnt++; }
                     ?>
                             </tbody>
                         </table>
+                        <div id="qrcode"></div>
                     </div>
 
 
@@ -339,6 +340,23 @@ button:hover {
         integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.all.min.js"></script>
+    <!-- <script>
+    function generateqr() {
+        var name = document.getElementById('name').value;
+        var disease = document.getElementById('disease').value;
+        var elergy = document.getElementById('elergy').value;
+        var prescribtion = document.getElementById('prescribtion').value;
+        console.log('Name: ' + name + "<?php?> " + disease + " " + elergy + " " + prescribtion);
+
+        var url = "https://chart.googleapis.com/chart?cht=qr&chs=200*200&chl=Name:" + name + "%0a Disease:" + disease +
+            "%0a Elergy: " + elergy + "%0a Prescribtion: " + prescribtion;
+
+        var ifr = `<iframe src="${url}" height="200" width="200"> </iframe>`;
+        document.getElementById('qrcode').innerHTML = ifr;
+
+
+    }
+    </script> -->
 </body>
 
 </html>
