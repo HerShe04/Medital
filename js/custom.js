@@ -1,15 +1,13 @@
-/*global jQuery:false */
 (function($) {
 
   var wow = new WOW({
-    boxClass: 'wow', // animated element css class (default is wow)
-    animateClass: 'animated', // animation css class (default is animated)
-    offset: 0, // distance to the element when triggering the animation (default is 0)
-    mobile: false // trigger animations on mobile devices (true is default)
+    boxClass: 'wow', 
+    animateClass: 'animated', 
+    offset: 0, 
+    mobile: false
   });
   wow.init();
 
-  //jQuery to collapse the navbar on scroll
   $(window).scroll(function() {
     if ($(".navbar").offset().top > 50) {
       $(".navbar-fixed-top").addClass("top-nav-collapse");
@@ -33,7 +31,6 @@
 	   navMain.collapse('hide');
 	});
 
-  //scroll to top
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('.scrollup').fadeIn();
@@ -48,7 +45,6 @@
     return false;
   });
 
-  //jQuery for page scrolling feature - requires jQuery Easing plugin
   $(function() {
     $('.navbar-nav li a').bind('click', function(event) {
       var $anchor = $(this);
@@ -70,7 +66,6 @@
     });
   });
 
-  //owl carousel
   $('#owl-works').owlCarousel({
     items: 4,
     itemsDesktop: [1199, 5],
@@ -82,18 +77,25 @@
 
   //nivo lightbox
   $('.owl-carousel .item a').nivoLightbox({
-    effect: 'fadeScale', // The effect to use when showing the lightbox
-    theme: 'default', // The lightbox theme to use
-    keyboardNav: true, // Enable/Disable keyboard navigation (left/right/escape)
-    clickOverlayToClose: true, // If false clicking the "close" button will be the only way to close the lightbox
-    onInit: function() {}, // Callback when lightbox has loaded
-    beforeShowLightbox: function() {}, // Callback before the lightbox is shown
-    afterShowLightbox: function(lightbox) {}, // Callback after the lightbox is shown
-    beforeHideLightbox: function() {}, // Callback before the lightbox is hidden
-    afterHideLightbox: function() {}, // Callback after the lightbox is hidden
-    onPrev: function(element) {}, // Callback when the lightbox gallery goes to previous item
-    onNext: function(element) {}, // Callback when the lightbox gallery goes to next item
-    errorMessage: 'The requested content cannot be loaded. Please try again later.' // Error message when content can't be loaded
+    effect: 'fadeScale', 
+    
+    theme: 'default', 
+    
+    keyboardNav: true, 
+    
+    clickOverlayToClose: true, 
+    
+    onInit: function() {}, 
+    
+    beforeShowLightbox: function() {}, 
+    
+    afterShowLightbox: function(lightbox) {}, 
+    
+    beforeHideLightbox: function() {},
+    afterHideLightbox: function() {}, 
+    onPrev: function(element) {},
+    onNext: function(element) {}, 
+    errorMessage: 'The requested content cannot be loaded. Please try again later.'
   });
 
   jQuery('.appear').appear();
@@ -104,7 +106,6 @@
   });
 
 
-  //parallax
   if ($('.parallax').length) {
     $(window).stellar({
       responsive: true,
@@ -123,7 +124,6 @@
     var gridContainer = $('#grid-container'),
       filtersContainer = $('#filters-container');
 
-    // init cubeportfolio
     gridContainer.cubeportfolio({
 
       defaultFilter: '*',
@@ -155,7 +155,6 @@
       singlePageShowCounter: true,
       singlePageCallback: function(url, element) {
 
-        // to update singlePage content use the following method: this.updateSinglePage(yourContent)
         var t = this;
 
         $.ajax({
@@ -179,17 +178,14 @@
       singlePageInlineShowCounter: true,
       singlePageInlineInFocus: true,
       singlePageInlineCallback: function(url, element) {
-        // to update singlePageInline content use the following method: this.updateSinglePageInline(yourContent)
       }
     });
 
-    // add listener for filters click
     filtersContainer.on('click', '.cbp-filter-item', function(e) {
 
       var me = $(this),
         wrap;
 
-      // get cubeportfolio data and check if is still animating (reposition) the items.
       if (!$.data(gridContainer[0], 'cubeportfolio').isAnimating) {
 
         if (filtersContainer.hasClass('cbp-l-filters-dropdown')) {
@@ -211,7 +207,6 @@
 
     });
 
-    // activate counter for filters
     gridContainer.cubeportfolio('showCounter', filtersContainer.find('.cbp-filter-item'));
 
   })(jQuery, window, document);

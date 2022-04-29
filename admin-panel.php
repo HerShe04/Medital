@@ -97,12 +97,10 @@ function get_specs(){
 <head>
 
 
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-    <!-- Bootstrap CSS -->
 
     <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
 
@@ -270,52 +268,6 @@ button:hover {
                                                 document.getElementById('docFees').value = selection;
                                             };
                                             </script>
-
-
-
-
-
-                                            <!-- <div class="col-md-4"><label for="doctor">Doctors:</label></div>
-                                <div class="col-md-8">
-                                    <select name="doctor" class="form-control" id="doctor1" required="required">
-                                      <option value="" disabled selected>Select Doctor</option>
-                                      
-                                    </select>
-                                </div>
-                                <br><br> -->
-
-                                            <!-- <script>
-                                  document.getElementById("spec").onchange = function updateSpecs(event) {
-                                      var selected = document.querySelector(`[data-value=${this.value}]`).getAttribute("value");
-                                      console.log(selected);
-
-                                      var options = document.getElementById("doctor1").querySelectorAll("option");
-
-                                      for (i = 0; i < options.length; i++) {
-                                        var currentOption = options[i];
-                                        var category = options[i].getAttribute("data-spec");
-
-                                        if (category == selected) {
-                                          currentOption.style.display = "block";
-                                        } else {
-                                          currentOption.style.display = "none";
-                                        }
-                                      }
-                                    }
-                                </script> -->
-
-
-                                            <!-- <script>
-                    let data = 
-                
-              document.getElementById('spec').onchange = function updateSpecs(e) {
-                let values = data.filter(obj => obj.spec == this.value).map(o => o.username);   
-                document.getElementById('doctor1').value = document.querySelector(`[value=${values}]`).getAttribute('data-value');
-              };
-            </script> -->
-
-
-
                                             <div class="col-md-4"><label for="consultancyfees">
                                                     Consultancy Fees
                                                 </label></div>
@@ -381,11 +333,6 @@ button:hover {
                     $result = mysqli_query($con,$query);
                     $cnt=1;
                     while ($row = mysqli_fetch_array($result)){
-              
-                      #$fname = $row['fname'];
-                      #$lname = $row['lname'];
-                      #$email = $row['email'];
-                      #$contact = $row['contact'];
                   ?>
                                 <tr>
                                     <td><?php echo $cnt;?></td>

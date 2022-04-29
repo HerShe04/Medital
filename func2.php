@@ -43,22 +43,6 @@ if(isset($_POST['update_data']))
 		header("Location:updated.php");
 }
 
-
-
-
-// function display_docs()
-// {
-// 	global $con;
-// 	$query="select * from doctb";
-// 	$result=mysqli_query($con,$query);
-// 	while($row=mysqli_fetch_array($result))
-// 	{
-// 		$name=$row['name'];
-// 		# echo'<option value="" disabled selected>Select Doctor</option>';
-// 		echo '<option value="'.$name.'">'.$name.'</option>';
-// 	}
-// }
-
 if(isset($_POST['doc_sub']))
 {
 	$name=$_POST['name'];
@@ -118,12 +102,6 @@ function display_admin_panel(){
        <a class="list-group-item list-group-item-action" id="list-attend-list" data-toggle="list" href="#list-attend" role="tab" aria-controls="settings">Attendance</a>
     </div><br>
   </div>
-
-  
-
-
-
-
 
   <div class="col-md-8">
     <div class="tab-content" id="nav-tabContent">

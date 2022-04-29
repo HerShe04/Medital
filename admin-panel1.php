@@ -42,12 +42,10 @@ if(isset($_POST['docsub1']))
 <head>
 
 
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
@@ -398,7 +396,7 @@ body {
                                     <td><?php echo $row['email'];?></td>
                                     <td><?php echo $row['contact'];?></td>
                                     <td><?php echo $row['doctor'];?></td>
-                                    <td><?php echo '$'.$row['docFees'];?></td>
+                                    <td><?php echo 'Rs.'.$row['docFees'];?></td>
                                     <td><?php echo $row['appdate'];?></td>
                                     <td><?php echo $row['apptime'];?></td>
                                     <td>
@@ -521,11 +519,6 @@ body {
                     $result = mysqli_query($con,$query);
                     $cnt=1;
                     while ($row = mysqli_fetch_array($result)){
-              
-                      #$fname = $row['fname'];
-                      #$lname = $row['lname'];
-                      #$email = $row['email'];
-                      #$contact = $row['contact'];
                   ?>
                                 <tr>
                                     <td><?php echo $cnt;?></td>
@@ -553,8 +546,7 @@ body {
         color: black;
     }
     </style>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>

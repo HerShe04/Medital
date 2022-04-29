@@ -16,24 +16,10 @@ if(isset($_POST['docsub1'])){
 		header("Location:doctor-panel.php");
 	}
 	else{
-    // header("Location:error2.php");
     echo("<script>alert('Invalid Username or Password. Try Again!');
           window.location.href = 'index.php';</script>");
   }
 }
-
-
-// if(isset($_POST['update_data']))  
-//   $result=mysqli_query($con,$query);
-//   if(mysqli_num_rows($result)==1)
-//   {
-//     $_SESSION['username']=$username;
-//     header("Location:admin-panel.php");
-//   }
-//   else
-//     header("Location:error2.php");
-  
-
 
 
 function display_docs()
@@ -44,31 +30,19 @@ function display_docs()
 	while($row=mysqli_fetch_array($result))
 	{
 		$name=$row['name'];
-		# echo'<option value="" disabled selected>Select Doctor</option>';
 		echo '<option value="'.$name.'">'.$name.'</option>';
 	}
 }
-
-// if(isset($_POST['doc_sub']))
-// {
-// 	$name=$_POST['name'];
-// 	$query="insert into doctb(name)values('$name')";
-// 	$result=mysqli_query($con,$query);
-// 	if($result)
-// 		header("Location:adddoc.php");
-// }
 
 
 function display_admin_panel(){
 	echo '<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="#">patient Management System</a>
@@ -195,8 +169,6 @@ function display_admin_panel(){
 </div>
 </div>
 </div>
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
 </script>
@@ -206,7 +178,6 @@ function display_admin_panel(){
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
     integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous">
 </script>
-<!--Sweet alert js-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.all.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
