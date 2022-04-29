@@ -217,6 +217,7 @@ button:hover {
                                     <th scope="col">Disease</th>
                                     <th scope="col">Allergy</th>
                                     <th scope="col">Prescribe</th>
+                                    <th scope="col">Qr Code</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -243,6 +244,8 @@ button:hover {
                                     <td><?php echo $row['disease'];?></td>
                                     <td><?php echo $row['allergy'];?></td>
                                     <td><?php echo $row['prescription'];?></td>
+                                    <button class="btn btn-dark"
+                                        style="position:absolute; top:58px; left:54em;">Generate</button></a>
 
                                 </tr>
                                 <?php $cnt++; }
