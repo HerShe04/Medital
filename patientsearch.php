@@ -50,7 +50,7 @@ if(isset($_POST['patient_search_submit']))
           <td>$password</td>
         </tr>";
     
-	echo "</tbody></table><center><a href='admin-panel1.php' class='btn btn-light'>Back to dashboard</a></div></center></div></div></div>";
+	echo "</tbody></table><center></div></center></div></div></div>";
 }
   }
 	

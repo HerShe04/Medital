@@ -117,6 +117,16 @@ button:hover {
                         <table class="table table-hover">
                             <thead>
                                 <tr>
+                                    <div class="col-md-8">
+                                        <form class="form-group" action="patientsearch.php" method="post">
+                                            <div class="row">
+                                                <div class="col-md-10"><input type="text" name="patient_contact"
+                                                        placeholder="Enter Contact" class="form-control"></div>
+                                                <div class="col-md-2"><input type="submit" name="patient_search_submit"
+                                                        class="btn btn-dark" value="Search"></div>
+                                            </div>
+                                        </form>
+                                    </div>
                                     <th scope="col">#</th>
                                     <th scope="col">Patient</th>
                                     <th scope="col">Gender</th>
@@ -127,6 +137,7 @@ button:hover {
                                     <th scope="col">Status</th>
                                     <th scope="col">Action</th>
                                     <th scope="col">Prescribe</th>
+                                    <th scope="col">Patient-id</th>
 
                                 </tr>
                             </thead>
@@ -198,6 +209,8 @@ button:hover {
 
                                 </tr></a>
                                 <?php $cnt++; } ?>
+                                <br>
+                                <p style="position:absolute; top:170px; left:908px;">#65db9c</p>
                             </tbody>
                         </table>
                         <br>
@@ -215,7 +228,7 @@ button:hover {
                                     <th scope="col">Appointment Date</th>
                                     <th scope="col">Appointment Time</th>
                                     <th scope="col">Disease</th>
-                                    <th scope="col">Allergy</th>
+                                    <th scope="col">Tests</th>
                                     <th scope="col">Prescribe</th>
                                     <th scope="col">Qr Code</th>
                                 </tr>

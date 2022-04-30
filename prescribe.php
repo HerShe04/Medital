@@ -134,7 +134,7 @@ button:hover {
                         </div>
 
                         <div class="form-group">
-                            <label>Allergies:</label>
+                            <label>Tests:</label>
                             <textarea id="allergy" class="form-control" rows="5" name="allergy" required></textarea>
                         </div>
 

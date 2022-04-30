@@ -84,7 +84,8 @@
         <div class="row">
             <div class="col-md-9 register-right"
                 style="margin-top: 40px;border-radius:20px; background-color:dedede;left: 80px;top:-30px;">
-                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist" style="width: 40%;">
+                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist"
+                    style="width: 75%; position:absolute; top:-30px; left:200px; border:2px solid black;">
                     <li class="nav-item">
                         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
                             aria-controls="home" aria-selected="true">Patient</a>
@@ -96,6 +97,16 @@
                     <li class="nav-item">
                         <a class="nav-link" id="profile-tab" data-toggle="tab" href="#admin" role="tab"
                             aria-controls="admin" aria-selected="false">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="margin-right:5px;" id=" profile-tab" data-toggle="tab"
+                            href="#pharmecist" role="tab" aria-controls="admin" aria-selected="false">Pharmacist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            style="margin-right:5px; margin-top:-1px; padding-top:2px; position:absolute; top:1px;left:500px; background:black; color:white;"
+                            id=" profile-tab" data-toggle="tab" href="#hospital" role="tab" aria-controls="admin"
+                            aria-selected="false">Hospital</a>
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
@@ -211,11 +222,40 @@
                     <!--------- pharmasist ---------->
                     <div class="tab-pane fade show" id="pharmecist" role="tabpanel" aria-labelledby="profile-tab">
                         <h3 class="register-heading">Login as Pharmacist</h3>
-                        <form method="post" action="func3.php">
+                        <form method="post" action="func4.php">
                             <div class="row register-form">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="User s *" name="username1"
+                                        <input type="text" class="form-control" placeholder="User name*"
+                                            name="username1" onkeydown="return alphaOnly(event);" required />
+                                    </div>
+
+
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password *"
+                                            name="password2" required />
+                                    </div>
+
+                                    <input type="submit" class="btnRegister" name="adsub" value="Login" />
+                                    <a href="index3.php" type="submit" class="btnRegister" name="adsub1" value="Sign Up"
+                                        style="position:absolute; left:-20px; top: 50px; text-decoration:none; color:white; text-align:center;"><strong>Sign
+                                            Up</strong></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- hospital -->
+                    <div class="tab-pane fade show" id="hospital" role="tabpanel" aria-labelledby="profile-tab">
+                        <h3 class="register-heading">Login as Hospital</h3>
+                        <form method="post" action="func4.php">
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="PAN No.*" name="username1"
                                             onkeydown="return alphaOnly(event);" required />
                                     </div>
 
@@ -229,6 +269,9 @@
                                     </div>
 
                                     <input type="submit" class="btnRegister" name="adsub" value="Login" />
+                                    <a href="index4.php" type="submit" class="btnRegister" name="adsub1" value="Sign Up"
+                                        style="position:absolute; left:-20px; top: 50px; text-decoration:none; color:white; text-align:center;"><strong>Sign
+                                            Up</strong></a>
                                 </div>
                             </div>
                         </form>

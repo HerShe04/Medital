@@ -27,7 +27,6 @@ if(isset($_POST['app-submit']))
   $contact = $_SESSION['contact'];
   $doctor=$_POST['doctor'];
   $email=$_SESSION['email'];
-  # $fees=$_POST['fees'];
   $docFees=$_POST['docFees'];
 
   $appdate=$_POST['appdate'];
@@ -250,6 +249,30 @@ button:hover {
                                             };
                                             </script>
 
+                                            <div class="col-md-4"><label for="doctor">Hospital:</label></div>
+                                            <div class="col-md-8">
+                                                <select name="doctor" class="form-control" id="doctor"
+                                                    required="required">
+                                                    <option value="" disabled selected>Select Hospital</option>
+
+
+                                                    <option value="1">Bir Hospital</option>
+                                                    <option value="2">Grande Hospital</option>
+                                                    <option value="3">Green City Hospital</option>
+                                                    <option value="4">Chirayu Hospital</option>
+                                                    <option value="5">Civil Hospital</option>
+                                                </select>
+
+
+
+
+
+
+
+
+                                                </select>
+                                            </div><br /><br />
+
                                             <div class="col-md-4"><label for="doctor">Doctors:</label></div>
                                             <div class="col-md-8">
                                                 <select name="doctor" class="form-control" id="doctor"
@@ -259,7 +282,6 @@ button:hover {
                                                     <?php display_docs(); ?>
                                                 </select>
                                             </div><br /><br />
-
 
                                             <script>
                                             document.getElementById('doctor').onchange = function updateFees(e) {
@@ -320,7 +342,9 @@ button:hover {
                                     <th scope="col">Date</th>
                                     <th scope="col">Time</th>
                                     <th scope="col">Status</th>
+                                    <th scope="col">Hospital</th>
                                     <th scope="col">Action</th>
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -365,7 +389,8 @@ button:hover {
                                         <a href="admin-panel.php?ID=<?php echo $row['ID']?>&cancel=update"
                                             onClick="return confirm('Are you sure you want to cancel this appointment ?')"
                                             title="Cancel Appointment" tooltip-placement="top" tooltip="Remove"><button
-                                                class="btn btn-danger">Cancel</button></a>
+                                                class="btn btn-danger"
+                                                style="position:absolute; right:-65px;">Cancel</button></a>
                                         <?php } else {
 
                                 echo "Cancelled";
@@ -375,6 +400,7 @@ button:hover {
                                 </tr>
                                 <?php $cnt++; } ?>
                             </tbody>
+                            <p style="position:absolute; top:65px; right:60px;">Bir Hospital</p>
                         </table>
                         <br>
                     </div>
@@ -391,7 +417,7 @@ button:hover {
                                     <th scope="col">Appointment Date</th>
                                     <th scope="col">Appointment Time</th>
                                     <th scope="col">Diseases</th>
-                                    <th scope="col">Allergies</th>
+                                    <th scope="col">Tests</th>
                                     <th scope="col">Prescriptions</th>
                                     <th scope="col">Payment</th>
                                 </tr>

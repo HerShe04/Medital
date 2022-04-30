@@ -144,8 +144,8 @@ body {
 
 <body style="padding-top:50px;">
     <div class="container-fluid" style="margin-top:50px;">
-        <h3 style="margin-left: 40%; padding-bottom: 20px;font-family: 'IBM Plex Sans', sans-serif;"> WELCOME
-            ADMINISTRATOR </h3>
+        <h3 style="margin-left: 40%; padding-bottom: 20px;font-family: 'IBM Plex Sans', sans-serif;"> WELCOME!!!
+        </h3>
         <div class="row">
             <div class="col-md-4" style="max-width:25%;margin-top: 3%;">
                 <div class="list-group" id="list-tab" role="tablist">
@@ -163,8 +163,6 @@ body {
                         role="tab" data-toggle="list" aria-controls="home">Add Doctor</a>
                     <a class="list-group-item list-group-item-action" href="#list-settings1" id="list-ddoc-list"
                         role="tab" data-toggle="list" aria-controls="home">Delete Doctor</a>
-                    <a class="list-group-item list-group-item-action" href="#list-settings2" id="list-ddoc-list"
-                        role="tab" data-toggle="list" aria-controls="home">Manage Hospital</a>
 
 
                 </div><br>
@@ -305,7 +303,7 @@ body {
                                             <th scope="col">Appointment Date</th>
                                             <th scope="col">Appointment Time</th>
                                             <th scope="col">Disease</th>
-                                            <th scope="col">Allergy</th>
+                                            <th scope="col">Tests</th>
                                             <th scope="col">Prescription</th>
                                         </tr>
                                     </thead>
@@ -483,118 +481,36 @@ body {
                                 onclick="confirm('do you really want to delete?')">
                         </form>
                     </div>
-                    <div class="tab-pane fade" id="list-settings2" role="tabpanel"
-                        aria-labelledby="list-settings2-list">
-                        <form class="form-group" method="post" action="admin-panel1.php">
-                            <div class="row">
 
-                                <div class="col-md-12"><label>Hospital List</label>
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col-md-4">#</th>
-                                                <th scope="col">Hospital Name</th>
-                                                <th scope="col">Address</th>
-                                                <th scope="col-7">Contact No.</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>Bir Hospital</td>
-                                                <td>Kanti Path, Kathmandu 44600</td>
-                                                <td>01-4221119</td>
 
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>Civil Hospital </td>
-                                                <td> Minbhawan Marg, Kathmandu 44600</td>
-                                                <td> 01-4107000</td>
+                    <div class="tab-pane fade" id="list-attend" role="tabpanel" aria-labelledby="list-attend-list">...
+                    </div>
 
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td>Bir Hospital</td>
-                                                <td>Kanti Path, Kathmandu 44600</td>
-                                                <td>01-4221119</td>
+                    <div class="tab-pane fade" id="list-mes" role="tabpanel" aria-labelledby="list-mes-list">
 
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">4</th>
-                                                <td>Civil Hospital </td>
-                                                <td> Minbhawan Marg, Kathmandu 44600</td>
-                                                <td> 01-4107000</td>
-
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">5</th>
-                                                <td>Bir Hospital</td>
-                                                <td>Kanti Path, Kathmandu 44600</td>
-                                                <td>01-4221119</td>
-
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">6</th>
-                                                <td>Civil Hospital </td>
-                                                <td> Minbhawan Marg, Kathmandu 44600</td>
-                                                <td> 01-4107000</td>
-
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">7</th>
-                                                <td>Bir Hospital</td>
-                                                <td>Kanti Path, Kathmandu 44600</td>
-                                                <td>01-4221119</td>
-
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">8</th>
-                                                <td>Civil Hospital </td>
-                                                <td> Minbhawan Marg, Kathmandu 44600</td>
-                                                <td> 01-4107000</td>
-
-                                            </tr>
-
-                                        </tbody>
-                                    </table>
+                        <div class="col-md-8">
+                            <form class="form-group" action="messearch.php" method="post">
+                                <div class="row">
+                                    <div class="col-md-10"><input type="text" name="mes_contact"
+                                            placeholder="Enter Contact" class="form-control"></div>
+                                    <div class="col-md-2"><input type="submit" name="mes_search_submit"
+                                            class="btn btn-dark" value="Search"></div>
                                 </div>
-                            </div><br><br>
+                            </form>
+                        </div>
 
-                    </div>
-
-                </div>
-
-
-
-                <div class="tab-pane fade" id="list-attend" role="tabpanel" aria-labelledby="list-attend-list">...
-                </div>
-
-                <div class="tab-pane fade" id="list-mes" role="tabpanel" aria-labelledby="list-mes-list">
-
-                    <div class="col-md-8">
-                        <form class="form-group" action="messearch.php" method="post">
-                            <div class="row">
-                                <div class="col-md-10"><input type="text" name="mes_contact" placeholder="Enter Contact"
-                                        class="form-control"></div>
-                                <div class="col-md-2"><input type="submit" name="mes_search_submit" class="btn btn-dark"
-                                        value="Search"></div>
-                            </div>
-                        </form>
-                    </div>
-
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Contact</th>
-                                <th scope="col">Message</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php 
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Contact</th>
+                                    <th scope="col">Message</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php 
 
                     include('connect.php');
                     global $con;
@@ -604,24 +520,24 @@ body {
                     $cnt=1;
                     while ($row = mysqli_fetch_array($result)){
                   ?>
-                            <tr>
-                                <td><?php echo $cnt;?></td>
-                                <td><?php echo $row['name'];?></td>
-                                <td><?php echo $row['email'];?></td>
-                                <td><?php echo $row['contact'];?></td>
-                                <td><?php echo $row['message'];?></td>
-                            </tr>
-                            <?php $cnt++; } ?>
-                        </tbody>
-                    </table>
-                    <br>
+                                <tr>
+                                    <td><?php echo $cnt;?></td>
+                                    <td><?php echo $row['name'];?></td>
+                                    <td><?php echo $row['email'];?></td>
+                                    <td><?php echo $row['contact'];?></td>
+                                    <td><?php echo $row['message'];?></td>
+                                </tr>
+                                <?php $cnt++; } ?>
+                            </tbody>
+                        </table>
+                        <br>
+                    </div>
+
+
+
                 </div>
-
-
-
             </div>
         </div>
-    </div>
     </div>
     <style>
     p,
