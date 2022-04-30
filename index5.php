@@ -222,8 +222,8 @@ li a {
             <p id="mp1">
                 QR Code scanner
             </p>
-            <a href="index4.php"
-                style="position:absolute; top:5.10em; left:3em; font-size:70px; text-decoration:none; cursor:pointer;">ㅤㅤㅤㅤㅤㅤㅤㅤ</a>
+            <a href="index7.php"
+                style="position:absolute; top:5.10em; left:3em; font-size:70px; text-decoration:none; ">ㅤㅤㅤㅤㅤㅤㅤㅤ</a>
         </div>
         <div id="mainbody">
             <table class="tsel" border="0" width="100%">

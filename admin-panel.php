@@ -449,10 +449,9 @@ button:hover {
                                         <form method="get">
 
 
-                                            <a href="admin-panel.php?ID=<?php echo $row['ID']?>">
+                                            <a id="#epay">
                                                 <input type="hidden">
-                                                <input type="submit" onclick="myFunction()" class="btn btn-dark"
-                                                    value="Pay Bill" />
+                                                <input type="submit" class="btn btn-dark" value="Pay" />
                                             </a>
                                     </td>
 
@@ -489,6 +488,7 @@ button:hover {
             </div>
         </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
@@ -502,18 +502,6 @@ button:hover {
     </script>
 
 
-    <script>
-    function myFunction() {
-        let text;
-        let person = prompt("Please enter your Esewa ID:", "");
-        if (person == null || person == "") {
-            text = "User cancelled the prompt.";
-        } else {
-            text = "Bill " + person + "paid sucessfully.";
-        }
-        document.getElementById("demo").innerHTML = text;
-    }
-    </script>
 </body>
 
 </html>
