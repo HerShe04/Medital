@@ -129,6 +129,7 @@ button:hover {
                                     </div>
                                     <th scope="col">#</th>
                                     <th scope="col">Patient</th>
+                                    <th scope="col">Patient-id</th>
                                     <th scope="col">Gender</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Contact</th>
@@ -137,7 +138,6 @@ button:hover {
                                     <th scope="col">Status</th>
                                     <th scope="col">Action</th>
                                     <th scope="col">Prescribe</th>
-                                    <th scope="col">Patient-id</th>
 
                                 </tr>
                             </thead>
@@ -154,6 +154,7 @@ button:hover {
                                 <tr>
                                     <td><?php echo $cnt;?></td>
                                     <td><?php echo $row['fname'];?> <?php echo $row['lname'];?></td>
+                                    <td>#65db9c</td>
                                     <td><?php echo $row['gender'];?></td>
                                     <td><?php echo $row['email'];?></td>
                                     <td><?php echo $row['contact'];?></td>
@@ -210,7 +211,6 @@ button:hover {
                                 </tr></a>
                                 <?php $cnt++; } ?>
                                 <br>
-                                <p style="position:absolute; top:170px; left:908px;">#65db9c</p>
                             </tbody>
                         </table>
                         <br>
@@ -257,6 +257,8 @@ button:hover {
                                     <td><?php echo $row['disease'];?></td>
                                     <td><?php echo $row['allergy'];?></td>
                                     <td><?php echo $row['prescription'];?></td>
+                                    <td> <button type="submit" class="btn btn-dark"
+                                            onclick="generateqr()">Generate</button></td>
 
 
                                 </tr>
@@ -264,6 +266,9 @@ button:hover {
                     ?>
                             </tbody>
                         </table>
+                        <div id="qrcodegen" style="text-align:center;">
+
+                        </div>
 
                     </div>
 
@@ -351,6 +356,16 @@ button:hover {
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.10.1/sweetalert2.all.min.js"></script>
 
+
+    <script>
+    function generateqr() {
+        var url =
+            "https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=Patient:Kishan Magar %0aDisease:Diarrhoea %0aTests:No test %0aPrescribtion:Bismuth Subsalicylate";
+        console.log(url);
+        var ifr = `<iframe src = "${url}" height ="200" width= "200"></iframe>`;
+        document.getElementById('qrcodegen').innerHTML = ifr;
+    }
+    </script>
 </body>
 
 </html>

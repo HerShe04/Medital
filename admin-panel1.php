@@ -252,6 +252,8 @@ body {
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Fullname</th>
+                                    <th scope="col">Patient ID</th>
+                                    <th scope="col">Hospital</th>
                                     <th scope="col">Gender</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Contact</th>
@@ -275,6 +277,8 @@ body {
                       echo "<tr>
                         <td>$cnt</td>
                         <td>$fname $lname</td>
+                        <td>#6db59c</td>
+                        <td>Bir Hospital</td>
                         <td>$gender</td>
                         <td>$email</td>
                         <td>$contact</td>

@@ -178,7 +178,7 @@ button:hover {
             <div class="col-md-4" style="max-width:25%; margin-top: 3%">
                 <div class="list-group" id="list-tab" role="tablist">
                     <a class="list-group-item list-group-item-action active" id="list-dash-list" data-toggle="list"
-                        href="#list-dash" role="tab" aria-controls="home">Dashboard</a>
+                        href="#list-dash9" role="tab" aria-controls="home">Dashboard</a>
                     <a class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list"
                         href="#list-home" role="tab" aria-controls="home">Book Appointment</a>
                     <a class="list-group-item list-group-item-action" href="#app-hist" id="list-pat-list" role="tab"
@@ -451,10 +451,11 @@ button:hover {
 
                                             <a href="admin-panel.php?ID=<?php echo $row['ID']?>">
                                                 <input type="hidden">
-                                                <input type="submit" onclick="alert('Bill Paid Successfully');"
-                                                    class="btn btn-dark" value="Pay Bill" />
+                                                <input type="submit" onclick="myFunction()" class="btn btn-dark"
+                                                    value="Pay Bill" />
                                             </a>
                                     </td>
+
                                     </form>
 
 
@@ -462,7 +463,10 @@ button:hover {
                                 <?php }
                     ?>
                             </tbody>
+                            <i> Your ID is #65db9c. </i>
+
                         </table>
+
                         <br>
                     </div>
 
@@ -498,7 +502,18 @@ button:hover {
     </script>
 
 
-
+    <script>
+    function myFunction() {
+        let text;
+        let person = prompt("Please enter your Esewa ID:", "");
+        if (person == null || person == "") {
+            text = "User cancelled the prompt.";
+        } else {
+            text = "Bill " + person + "paid sucessfully.";
+        }
+        document.getElementById("demo").innerHTML = text;
+    }
+    </script>
 </body>
 
 </html>

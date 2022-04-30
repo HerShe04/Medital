@@ -162,8 +162,23 @@
                                             placeholder="Confirm Password *" name="cpassword" onkeyup='check();'
                                             required /><span id='message'></span>
                                     </div>
-                                    <input type="submit" class="btnRegister" name="patsub1" onclick="return checklen();"
-                                        value="Register" />
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="cpassword" placeholder=" DOB *"
+                                            name="cpassword">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="cpassword" placeholder="Age *"
+                                            name="cpassword">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="cpassword"
+                                            placeholder="Nationality*" name="cpassword">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" id="cpassword"
+                                            placeholder="Address*" name="cpassword">
+                                    </div> <input type="submit" class="btnRegister" name="patsub1"
+                                        onclick="return checklen();" value="Register" />
                                 </div>
 
                             </div>
@@ -239,7 +254,8 @@
                                             name="password2" required />
                                     </div>
 
-                                    <input type="submit" class="btnRegister" name="adsub" value="Login" />
+                                    <a href="index5.php" type="submit" class="btnRegister" name="adsub1" value="Sign Up"
+                                        style="position:absolute; left:180px; top: 50px; text-decoration:none; color:white; text-align:center;"><strong>Login</strong></a>
                                     <a href="index3.php" type="submit" class="btnRegister" name="adsub1" value="Sign Up"
                                         style="position:absolute; left:-20px; top: 50px; text-decoration:none; color:white; text-align:center;"><strong>Sign
                                             Up</strong></a>
@@ -255,8 +271,7 @@
                             <div class="row register-form">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="PAN No.*" name="username1"
-                                            onkeydown="return alphaOnly(event);" required />
+                                        <input type="text" class="form-control" placeholder="PAN No.*" name="username1">
                                     </div>
 
 
@@ -268,7 +283,8 @@
                                             name="password2" required />
                                     </div>
 
-                                    <input type="submit" class="btnRegister" name="adsub" value="Login" />
+                                    <a href="index6.php" type="submit" class="btnRegister" name="adsub1" value="Sign Up"
+                                        style="position:absolute; left:190px; top: 50px; text-decoration:none; color:white; text-align:center;"><strong>Login</strong></a>
                                     <a href="index4.php" type="submit" class="btnRegister" name="adsub1" value="Sign Up"
                                         style="position:absolute; left:-20px; top: 50px; text-decoration:none; color:white; text-align:center;"><strong>Sign
                                             Up</strong></a>

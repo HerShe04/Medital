@@ -144,7 +144,8 @@ body {
 
 <body style="padding-top:50px;">
     <div class="container-fluid" style="margin-top:50px;">
-        <h3 style="margin-left: 40%; padding-bottom: 20px;font-family: 'IBM Plex Sans', sans-serif;"> WELCOME!!!
+        <h3 style="margin-left: 40%; padding-bottom: 20px;font-family: 'IBM Plex Sans', sans-serif;"> WELCOME Bir
+            Hospital!!!
         </h3>
         <div class="row">
             <div class="col-md-4" style="max-width:25%;margin-top: 3%;">
@@ -250,6 +251,7 @@ body {
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">Fullname</th>
+                                    <th scope="col">Patient ID</th>
                                     <th scope="col">Gender</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Contact</th>
@@ -272,6 +274,7 @@ body {
                       
                       echo "<tr>
                         <td>$cnt</td>
+                        <td>#6db59c</td>
                         <td>$fname $lname</td>
                         <td>$gender</td>
                         <td>$email</td>
