@@ -244,7 +244,6 @@ button:hover {
                                     <td><?php echo $row['disease'];?></td>
                                     <td><?php echo $row['allergy'];?></td>
                                     <td><?php echo $row['prescription'];?></td>
-                                    <input type="submit" value="Generate" class="btn btn-dark" onclick="generateqr()">
 
 
                                 </tr>
@@ -327,6 +326,7 @@ button:hover {
             </div>
         </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>

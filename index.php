@@ -97,10 +97,6 @@
                         <a class="nav-link" id="profile-tab" data-toggle="tab" href="#admin" role="tab"
                             aria-controls="admin" aria-selected="false">Admin</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" style="margin-right:5px;" id=" profile-tab" data-toggle="tab" href="#admin"
-                            role="tab" aria-controls="admin" aria-selected="false">Pharmacist</a>
-                    </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -195,6 +191,32 @@
                                     <div class="form-group">
                                         <input type="text" class="form-control" placeholder="User Name *"
                                             name="username1" onkeydown="return alphaOnly(event);" required />
+                                    </div>
+
+
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="Password *"
+                                            name="password2" required />
+                                    </div>
+
+                                    <input type="submit" class="btnRegister" name="adsub" value="Login" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!--------- pharmasist ---------->
+                    <div class="tab-pane fade show" id="pharmecist" role="tabpanel" aria-labelledby="profile-tab">
+                        <h3 class="register-heading">Login as Pharmacist</h3>
+                        <form method="post" action="func3.php">
+                            <div class="row register-form">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="User s *" name="username1"
+                                            onkeydown="return alphaOnly(event);" required />
                                     </div>
 
 
