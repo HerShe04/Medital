@@ -11,6 +11,7 @@ if(isset($_POST['adsub'])){
 		$_SESSION['username']=$username;
 		header("Location:admin-panel1.php");
 	}
+	
 	else
 		echo("<script>alert('Invalid Username or Password. Try Again!');
           window.location.href = 'index.php';</script>");

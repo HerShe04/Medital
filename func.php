@@ -8,6 +8,7 @@ if(isset($_POST['patsub'])){
 	$result=mysqli_query($con,$query);
 	if(mysqli_num_rows($result)==1)
 	{
+    
 		while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
       $_SESSION['pid'] = $row['pid'];
       $_SESSION['username'] = $row['fname']." ".$row['lname'];

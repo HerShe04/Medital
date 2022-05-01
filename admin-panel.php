@@ -5,7 +5,6 @@ include('newfunc.php');
 include('connect.php');
 
 
-
   $pid = $_SESSION['pid'];
   $username = $_SESSION['username'];
   $email = $_SESSION['email'];

@@ -3,7 +3,6 @@
 include('connect.php');
 
 include('newfunc.php');
-
 if(isset($_POST['docsub']))
 {
   $doctorname=$_POST['doctorname'];

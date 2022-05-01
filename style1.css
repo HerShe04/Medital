@@ -16,6 +16,7 @@ body {
 .register-left input {
   border: none;
   border-radius: 1.5rem;
+  
   padding: 2%;
   width: 60%;
   background: #f8f9fa;

@@ -4,6 +4,7 @@ include('connect.php');
 if(isset($_POST['docsub1'])){
 	$dname=$_POST['username3'];
 	$dpass=$_POST['password3'];
+  
 	$query="select * from doctb where username='$dname' and password='$dpass';";
 	$result=mysqli_query($con,$query);
 	if(mysqli_num_rows($result)==1)

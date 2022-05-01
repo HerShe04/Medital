@@ -22,6 +22,7 @@ function display_specs() {
   }
 }
 
+
 function display_docs()
 {
  global $con;

@@ -22,6 +22,7 @@ session_destroy();
     </style>
 </head>
 
+
 <body style="background: #ffffff;padding-top:100px;text-align:center;">
     <div class="logout-text" style="position:absolute;margin:100px; left:360px;">
         <h3>Logged Out Successfully!</h3><br><br>

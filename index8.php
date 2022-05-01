@@ -72,7 +72,7 @@
 < <body>
 
 
-    <title>Web QR</title>
+    <title>Payment</title>
 
 
     <script type="text/javascript" src="https://webqr.com/llqrcode.js"></script>

@@ -11,6 +11,7 @@ if(isset($_GET['cancel']))
       echo "<script>alert('Your appointment successfully cancelled');</script>";
     }
   }
+  
 ?>
 <html lang="en">
 

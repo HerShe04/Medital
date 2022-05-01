@@ -19,6 +19,7 @@ if(isset($_POST['search_submit'])){
   <center><h3>Search Results</h3></center><br>
   <table class="table table-hover">
   <thead>
+  
     <tr>
       <th>Fullname</th>
       <th>Email</th>

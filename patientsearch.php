@@ -20,6 +20,7 @@ if(isset($_POST['patient_search_submit']))
     echo "<script> alert('No entries found! Please enter valid details'); 
           window.location.href = 'admin-panel1.php#list-doc';</script>";
   }
+  
   else {
     echo "<div class='container-fluid' style='margin-top:50px;'>
 	<div class='card'>
