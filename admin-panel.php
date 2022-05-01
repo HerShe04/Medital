@@ -419,6 +419,7 @@ button:hover {
                                     <th scope="col">Diseases</th>
                                     <th scope="col">Tests</th>
                                     <th scope="col">Prescriptions</th>
+                                    <th scope="col">Prescription Time</th>
                                     <th scope="col">Payment</th>
                                 </tr>
                             </thead>
@@ -445,13 +446,15 @@ button:hover {
                                     <td><?php echo $row['disease'];?></td>
                                     <td><?php echo $row['allergy'];?></td>
                                     <td><?php echo $row['prescription'];?></td>
+                                    <td>6:00 A.M, 1:00PM & 6:00 PM</td>
                                     <td>
                                         <form method="get">
 
 
-                                            <a id="#epay">
-                                                <input type="hidden">
-                                                <input type="submit" class="btn btn-dark" value="Pay" />
+                                            <a href="index8.php"
+                                                style="padding:10px ; text-decoration:none; border-radius:10px;  3px solid black; color:white; background-color:black;">
+                                                Pay
+
                                             </a>
                                     </td>
 

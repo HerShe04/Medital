@@ -156,6 +156,8 @@ body {
                         aria-controls="home" data-toggle="list">View Doctors</a>
                     <a class="list-group-item list-group-item-action" href="#list-pat" id="list-pat-list" role="tab"
                         data-toggle="list" aria-controls="home">View Patients</a>
+                    <a class="list-group-item list-group-item-action" href="#list-pad" id="list-pat-list" role="tab"
+                        data-toggle="list" aria-controls="home">Add Patients</a>
                     <a class="list-group-item list-group-item-action" href="#list-app" id="list-app-list" role="tab"
                         data-toggle="list" aria-controls="home">Appointment Details</a>
                     <a class="list-group-item list-group-item-action" href="#list-pres" id="list-pres-list" role="tab"
@@ -351,38 +353,147 @@ body {
                     </div>
 
 
+                    <!-- add-patient -->
 
 
-                    <div class="tab-pane fade" id="list-app" role="tabpanel" aria-labelledby="list-pat-list">
+
+
+
+
+
+
+
+                    <div class="tab-pane fade" id="list-pad" role="tabpanel" aria-labelledby="list-pat-list">
 
                         <div class="col-md-8">
-                            <form class="form-group" action="appsearch.php" method="post">
-                                <div class="row">
-                                    <div class="col-md-10"><input type="text" name="app_contact"
-                                            placeholder="Enter Contact" class="form-control"></div>
-                                    <div class="col-md-2"><input type="submit" name="app_search_submit"
-                                            class="btn btn-dark" value="Search"></div>
+                            <form method="post" action="func2.php">
+                                <div class="row register-form">
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="First Name *"
+                                                name="fname" onkeydown="return alphaOnly(event);" required />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Patient's Email *"
+                                                name="email" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="Password *"
+                                                id="password" name="password" onkeyup='check();' required />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="maxl">
+                                                <label class="radio inline">
+                                                    <input type="radio" name="gender" value="Male" checked>
+                                                    <span> Male </span>
+                                                </label>
+                                                <label class="radio inline">
+                                                    <input type="radio" name="gender" value="Female">
+                                                    <span>Female </span>
+                                                </label>
+                                                <br>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Last Name *"
+                                                name="lname" onkeydown="return alphaOnly(event);" required />
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="tel" minlength="10" maxlength="10" name="contact"
+                                                class="form-control" placeholder="Contact *" />
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" id="cpassword"
+                                                placeholder="Confirm Password *" name="cpassword" onkeyup='check();'
+                                                required /><span id='message'></span>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" id="cpassword"
+                                                placeholder=" DOB *" name="cpassword">
+                                        </div>
+                                        <label class="radio inline">
+                                            <input type="radio" name="gender" value="Male" checked>
+                                            <span>Citizenship </span>
+                                        </label>
+                                        <label class="radio inline">
+                                            <input type="radio" name="gender" value="Female">
+                                            <span>Passport No. </span>
+                                        </label>
+                                        <label class="radio inline">
+                                            <input type="radio" name="gender"
+                                                style="position:absolute;left:-10px; top:260px;" value="Female">
+                                            <select class="form-control" id="123" required="required">
+
+                                                <option value="" disabled selected>Others </option>
+
+
+                                                <option value="1">Birth Certificate No. Hospital</option>
+                                                <option value="2">LIscence No.</option>
+                                            </select>
+
+                                        </label>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" id="cpassword" name="cpassword">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" id="cpassword"
+                                                placeholder="Nationality*" name="cpassword">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" id="cpassword"
+                                                placeholder="Address*" name="cpassword">
+                                        </div> <input type="submit" class="btnRegister" name="patsub1"
+                                            onclick="return checklen();" value="Register" />
+                                    </div>
+
                                 </div>
                             </form>
                         </div>
+                    </div>
 
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Fullname</th>
-                                    <th scope="col">Gender</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Contact</th>
-                                    <th scope="col">Doctor</th>
-                                    <th scope="col">Fees</th>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Time</th>
-                                    <th scope="col">Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php 
+
+
+                </div>
+                <!-- add-patient -->
+
+                <div class="tab-pane fade" id="list-app" role="tabpanel" aria-labelledby="list-pat-list">
+
+                    <div class="col-md-8">
+                        <form class="form-group" action="appsearch.php" method="post">
+                            <div class="row">
+                                <div class="col-md-10"><input type="text" name="app_contact" placeholder="Enter Contact"
+                                        class="form-control"></div>
+                                <div class="col-md-2"><input type="submit" name="app_search_submit" class="btn btn-dark"
+                                        value="Search"></div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Fullname</th>
+                                <th scope="col">Gender</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Contact</th>
+                                <th scope="col">Doctor</th>
+                                <th scope="col">Fees</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Time</th>
+                                <th scope="col">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
 
                     include('connect.php');
                     global $con;
@@ -392,18 +503,18 @@ body {
                     $cnt=1;
                     while ($row = mysqli_fetch_array($result)){
                   ?>
-                                <tr>
-                                    <td><?php echo $cnt;?></td>
-                                    <td><?php echo $row['fname'];?> <?php echo $row['lname'];?></td>
-                                    <td><?php echo $row['gender'];?></td>
-                                    <td><?php echo $row['email'];?></td>
-                                    <td><?php echo $row['contact'];?></td>
-                                    <td><?php echo $row['doctor'];?></td>
-                                    <td><?php echo 'Rs.'.$row['docFees'];?></td>
-                                    <td><?php echo $row['appdate'];?></td>
-                                    <td><?php echo $row['apptime'];?></td>
-                                    <td>
-                                        <?php if(($row['userStatus']==1) && ($row['doctorStatus']==1))  
+                            <tr>
+                                <td><?php echo $cnt;?></td>
+                                <td><?php echo $row['fname'];?> <?php echo $row['lname'];?></td>
+                                <td><?php echo $row['gender'];?></td>
+                                <td><?php echo $row['email'];?></td>
+                                <td><?php echo $row['contact'];?></td>
+                                <td><?php echo $row['doctor'];?></td>
+                                <td><?php echo 'Rs.'.$row['docFees'];?></td>
+                                <td><?php echo $row['appdate'];?></td>
+                                <td><?php echo $row['apptime'];?></td>
+                                <td>
+                                    <?php if(($row['userStatus']==1) && ($row['doctorStatus']==1))  
                     {
                       echo "Active";
                     }
@@ -417,103 +528,102 @@ body {
                       echo "Cancelled by Doctor";
                     }
                         ?></td>
-                                </tr>
-                                <?php $cnt++; } ?>
-                            </tbody>
-                        </table>
-                        <br>
-                    </div>
+                            </tr>
+                            <?php $cnt++; } ?>
+                        </tbody>
+                    </table>
+                    <br>
+                </div>
 
-                    <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
-                        ...</div>
+                <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                    ...</div>
 
-                    <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
-                        <form class="form-group" method="post" action="admin-panel1.php">
-                            <div class="row">
-                                <div class="col-md-4"><label>Doctor Name:</label></div>
-                                <div class="col-md-8"><input type="text" class="form-control" name="doctorname"
-                                        onkeydown="return alphaOnly(event);" required></div><br><br>
-                                <div class="col-md-4"><label>Username:</label></div>
-                                <div class="col-md-8"><input type="text" class="form-control" name="doctor"
-                                        onkeydown="return alphaOnly(event);" required></div><br><br>
-                                <div class="col-md-4"><label>Specialization:</label></div>
-                                <div class="col-md-8">
-                                    <select name="special" class="form-control" id="special" required="required">
-                                        <option value="head" name="spec" disabled selected>Select Specialization
-                                        </option>
-                                        <option value="General" name="spec">General</option>
-                                        <option value="Gynecologist" name="spec">Gynecologist</option>
-                                        <option value="Oncologist">Oncologist</option>
-                                        <option value="Cardiologist" name="spec">Cardiologist</option>
-                                        <option value="Gastroenterologist">Gastroenterologist</option>
-                                        <option value="Neurologist" name="spec">Neurologist</option>
-                                        <option value="Pediatrician" name="spec">Pediatrician</option>
-                                    </select>
-                                </div><br><br>
-                                <div class="col-md-4"><label>Email ID:</label></div>
-                                <div class="col-md-8"><input type="email" class="form-control" name="demail" required>
-                                </div><br><br>
-                                <div class="col-md-4"><label>Password:</label></div>
-                                <div class="col-md-8"><input type="password" class="form-control" onkeyup='check();'
-                                        name="dpassword" id="dpassword" required></div><br><br>
-                                <div class="col-md-4"><label>Confirm Password:</label></div>
-                                <div class="col-md-8" id='cpass'><input type="password" class="form-control"
-                                        onkeyup='check();' name="cdpassword" id="cdpassword" required>&nbsp &nbsp<span
-                                        id='message'></span> </div><br><br>
-
-
-                                <div class="col-md-4"><label>Consultancy Fees:</label></div>
-                                <div class="col-md-8"><input type="text" class="form-control" name="docFees" required>
-                                </div><br><br>
-                            </div>
-                            <input type="submit" name="docsub" value="Add Doctor" class="btn btn-dark">
-                        </form>
-                    </div>
-
-                    <div class="tab-pane fade" id="list-settings1" role="tabpanel"
-                        aria-labelledby="list-settings1-list">
-                        <form class="form-group" method="post" action="admin-panel1.php">
-                            <div class="row">
-
-                                <div class="col-md-4"><label>Email ID:</label></div>
-                                <div class="col-md-8"><input type="email" class="form-control" name="demail" required>
-                                </div><br><br>
-
-                            </div>
-                            <input type="submit" name="docsub1" value="Delete Doctor" class="btn btn-dark"
-                                onclick="confirm('do you really want to delete?')">
-                        </form>
-                    </div>
+                <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                    <form class="form-group" method="post" action="admin-panel1.php">
+                        <div class="row">
+                            <div class="col-md-4"><label>Doctor Name:</label></div>
+                            <div class="col-md-8"><input type="text" class="form-control" name="doctorname"
+                                    onkeydown="return alphaOnly(event);" required></div><br><br>
+                            <div class="col-md-4"><label>Username:</label></div>
+                            <div class="col-md-8"><input type="text" class="form-control" name="doctor"
+                                    onkeydown="return alphaOnly(event);" required></div><br><br>
+                            <div class="col-md-4"><label>Specialization:</label></div>
+                            <div class="col-md-8">
+                                <select name="special" class="form-control" id="special" required="required">
+                                    <option value="head" name="spec" disabled selected>Select Specialization
+                                    </option>
+                                    <option value="General" name="spec">General</option>
+                                    <option value="Gynecologist" name="spec">Gynecologist</option>
+                                    <option value="Oncologist">Oncologist</option>
+                                    <option value="Cardiologist" name="spec">Cardiologist</option>
+                                    <option value="Gastroenterologist">Gastroenterologist</option>
+                                    <option value="Neurologist" name="spec">Neurologist</option>
+                                    <option value="Pediatrician" name="spec">Pediatrician</option>
+                                </select>
+                            </div><br><br>
+                            <div class="col-md-4"><label>Email ID:</label></div>
+                            <div class="col-md-8"><input type="email" class="form-control" name="demail" required>
+                            </div><br><br>
+                            <div class="col-md-4"><label>Password:</label></div>
+                            <div class="col-md-8"><input type="password" class="form-control" onkeyup='check();'
+                                    name="dpassword" id="dpassword" required></div><br><br>
+                            <div class="col-md-4"><label>Confirm Password:</label></div>
+                            <div class="col-md-8" id='cpass'><input type="password" class="form-control"
+                                    onkeyup='check();' name="cdpassword" id="cdpassword" required>&nbsp &nbsp<span
+                                    id='message'></span> </div><br><br>
 
 
-                    <div class="tab-pane fade" id="list-attend" role="tabpanel" aria-labelledby="list-attend-list">...
-                    </div>
-
-                    <div class="tab-pane fade" id="list-mes" role="tabpanel" aria-labelledby="list-mes-list">
-
-                        <div class="col-md-8">
-                            <form class="form-group" action="messearch.php" method="post">
-                                <div class="row">
-                                    <div class="col-md-10"><input type="text" name="mes_contact"
-                                            placeholder="Enter Contact" class="form-control"></div>
-                                    <div class="col-md-2"><input type="submit" name="mes_search_submit"
-                                            class="btn btn-dark" value="Search"></div>
-                                </div>
-                            </form>
+                            <div class="col-md-4"><label>Consultancy Fees:</label></div>
+                            <div class="col-md-8"><input type="text" class="form-control" name="docFees" required>
+                            </div><br><br>
                         </div>
+                        <input type="submit" name="docsub" value="Add Doctor" class="btn btn-dark">
+                    </form>
+                </div>
 
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Contact</th>
-                                    <th scope="col">Message</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php 
+                <div class="tab-pane fade" id="list-settings1" role="tabpanel" aria-labelledby="list-settings1-list">
+                    <form class="form-group" method="post" action="admin-panel1.php">
+                        <div class="row">
+
+                            <div class="col-md-4"><label>Email ID:</label></div>
+                            <div class="col-md-8"><input type="email" class="form-control" name="demail" required>
+                            </div><br><br>
+
+                        </div>
+                        <input type="submit" name="docsub1" value="Delete Doctor" class="btn btn-dark"
+                            onclick="confirm('do you really want to delete?')">
+                    </form>
+                </div>
+
+
+                <div class="tab-pane fade" id="list-attend" role="tabpanel" aria-labelledby="list-attend-list">...
+                </div>
+
+                <div class="tab-pane fade" id="list-mes" role="tabpanel" aria-labelledby="list-mes-list">
+
+                    <div class="col-md-8">
+                        <form class="form-group" action="messearch.php" method="post">
+                            <div class="row">
+                                <div class="col-md-10"><input type="text" name="mes_contact" placeholder="Enter Contact"
+                                        class="form-control"></div>
+                                <div class="col-md-2"><input type="submit" name="mes_search_submit" class="btn btn-dark"
+                                        value="Search"></div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Contact</th>
+                                <th scope="col">Message</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php 
 
                     include('connect.php');
                     global $con;
@@ -523,24 +633,24 @@ body {
                     $cnt=1;
                     while ($row = mysqli_fetch_array($result)){
                   ?>
-                                <tr>
-                                    <td><?php echo $cnt;?></td>
-                                    <td><?php echo $row['name'];?></td>
-                                    <td><?php echo $row['email'];?></td>
-                                    <td><?php echo $row['contact'];?></td>
-                                    <td><?php echo $row['message'];?></td>
-                                </tr>
-                                <?php $cnt++; } ?>
-                            </tbody>
-                        </table>
-                        <br>
-                    </div>
-
-
-
+                            <tr>
+                                <td><?php echo $cnt;?></td>
+                                <td><?php echo $row['name'];?></td>
+                                <td><?php echo $row['email'];?></td>
+                                <td><?php echo $row['contact'];?></td>
+                                <td><?php echo $row['message'];?></td>
+                            </tr>
+                            <?php $cnt++; } ?>
+                        </tbody>
+                    </table>
+                    <br>
                 </div>
+
+
+
             </div>
         </div>
+    </div>
     </div>
     <style>
     p,

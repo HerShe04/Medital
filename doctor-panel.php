@@ -230,6 +230,7 @@ button:hover {
                                     <th scope="col">Disease</th>
                                     <th scope="col">Tests</th>
                                     <th scope="col">Prescribe</th>
+                                    <th scope="col">Medication Time</th>
                                     <th scope="col">Qr Code</th>
                                 </tr>
                             </thead>
@@ -257,6 +258,7 @@ button:hover {
                                     <td><?php echo $row['disease'];?></td>
                                     <td><?php echo $row['allergy'];?></td>
                                     <td><?php echo $row['prescription'];?></td>
+                                    <td>6:00 AM, 1:00 PM & 6:00PM</td>
                                     <td> <button type="submit" class="btn btn-dark"
                                             onclick="generateqr()">Generate</button></td>
 

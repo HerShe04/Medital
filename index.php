@@ -139,6 +139,8 @@
                                                 <input type="radio" name="gender" value="Female">
                                                 <span>Female </span>
                                             </label>
+                                            <br>
+
                                         </div>
                                         <strong> <a href="index1.php" style="decoration:none; color:black;">Already have
                                                 an
@@ -166,9 +168,29 @@
                                         <input type="password" class="form-control" id="cpassword" placeholder=" DOB *"
                                             name="cpassword">
                                     </div>
+                                    <label class="radio inline">
+                                        <input type="radio" name="gender" value="Male" checked>
+                                        <span>Citizenship </span>
+                                    </label>
+                                    <label class="radio inline">
+                                        <input type="radio" name="gender" value="Female">
+                                        <span>Passport No. </span>
+                                    </label>
+                                    <label class="radio inline">
+                                        <input type="radio" name="gender"
+                                            style="position:absolute;left:-10px; top:260px;" value="Female">
+                                        <select class="form-control" id="123" required="required">
+
+                                            <option value="" disabled selected>Others </option>
+
+
+                                            <option value="1">Birth Certificate No. Hospital</option>
+                                            <option value="2">LIscence No.</option>
+                                        </select>
+
+                                    </label>
                                     <div class="form-group">
-                                        <input type="password" class="form-control" id="cpassword" placeholder="Age *"
-                                            name="cpassword">
+                                        <input type="password" class="form-control" id="cpassword" name="cpassword">
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control" id="cpassword"
