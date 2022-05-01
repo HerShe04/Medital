@@ -25,60 +25,6 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <script>
-        var check = function() {
-            if (document.getElementById('dpassword').value ==
-                document.getElementById('cdpassword').value) {
-                document.getElementById('message').style.color = '#5dd05d';
-                document.getElementById('message').innerHTML = 'Matched';
-            } else {
-                document.getElementById('message').style.color = '#f55252';
-                document.getElementById('message').innerHTML = 'Password fields doesnot match';
-            }
-        }
-
-        function alphaOnly(event) {
-            var key = event.keyCode;
-            return ((key >= 65 && key <= 90) || key == 8 || key == 32);
-        };
-        </script>
-
-        <style>
-        .bg-primary {
-            background: #F0F2F0;
-
-        }
-
-        .col-md-4 {
-            max-width: 20% !important;
-        }
-
-        .list-group-item.active {
-            z-index: 2;
-            color: #fff;
-            background: #000000;
-
-            border-color: #c3c3c3;
-        }
-
-        .text-primary {
-            color: #000000 !important;
-        }
-
-        #cpass {
-            display: -webkit-box;
-        }
-
-        #list-app {
-            font-size: 15px;
-        }
-
-        .btn-primary {
-            background-color: #000000;
-            border-color: #000000;
-        }
-        </style>
-
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
@@ -101,7 +47,12 @@
 
 
 <body>
-    <div></div>
+    <form style="text-align:center; position:absolute; top:200px; left:500px; font-size:22px;">
+        <div class=" form-group">
+            <p>Name: Kishan Magar<br>Hospital: Bir Hospital <br> Disease: Diarrohoea<br>Tests: no tests
+                <br>Prescription:
+                Bismuth Subsalicylate </p>
+    </form>
 </body>
 
 </html>
