@@ -210,7 +210,6 @@ li a {
 
     <title>Pharmacist</title>
 
-
     <script type="text/javascript" src="https://webqr.com/llqrcode.js"></script>
     <script type="text/javascript" src="https://webqr.com/webqr.js"></script>
 
