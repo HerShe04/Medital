@@ -47,7 +47,7 @@
 
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="position" id="mainNav">
         <div class="container">
 
             <a class="navbar-brand js-scroll-trigger" href="#"
@@ -63,7 +63,7 @@
                     <li class="nav-item" style="margin-right: 40px;">
                         <a class="nav-link js-scroll-trigger" href="index.php"
                             style="color: black;font-family: 'IBM Plex Sans', sans-serif;">
-                            <h6 style="margin-left:-250px;">HOME</h6>
+                            <h6 style="margin-left:-80px;">HOME</h6>
                         </a>
                     </li>
 
@@ -71,7 +71,7 @@
                     <li class=" nav-item">
                         <a class="nav-link js-scroll-trigger" href="contact.html"
                             style="color: black;font-family: 'IBM Plex Sans', sans-serif;">
-                            <h6 style="margin-left:-200px;">CONTACT</h6>
+                            <h6 style="margin-left:-60px;">CONTACT</h6>
                         </a>
                     </li>
                 </ul>
@@ -85,8 +85,10 @@
         <div class="row">
             <div class="col-md-9 register-right"
                 style="margin-top: 40px;border-radius:20px; background-color:dedede;left: 80px;top:-30px;">
-                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist"
-                    style="width: 75%; position:absolute; top:-30px; left:200px; border:2px solid black;">
+                <ul class="nav nav-tabs nav-justified " id="myTab" role="tablist"
+                    style="width: 75%; position:absolute; top:-25px; left:90px; border:2px solid black;">
+
+
                     <li class="nav-item">
                         <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
                             aria-controls="home" aria-selected="true">Patient</a>
@@ -109,6 +111,7 @@
                             id=" profile-tab" data-toggle="tab" href="#hospital" role="tab" aria-controls="admin"
                             aria-selected="false">Hospital</a>
                     </li>
+
                 </ul>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">

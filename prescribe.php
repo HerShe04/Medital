@@ -130,12 +130,12 @@ button:hover {
                 <div class="row">
                     <div class="container">
                         <div class="form-group">
-                            <label>Disease:</label>
+                            <label>Disease and causes:</label>
                             <textarea id="disease" class="form-control" rows="5" name="disease" required></textarea>
                         </div>
 
                         <div class="form-group">
-                            <label>Tests:</label>
+                            <label>Symptoms:</label>
                             <textarea id="allergy" class="form-control" rows="5" name="allergy" required></textarea>
                         </div>
 
