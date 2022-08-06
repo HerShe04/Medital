@@ -47,7 +47,7 @@ body {
 
             <a class="navbar-brand js-scroll-trigger" href="index.php"
                 style="margin-top: 10px;margin-left:-65px;font-family: 'IBM Plex Sans', sans-serif;">
-                <h4 style="color:black;">PATIENT MANAGEMENT SYSTEM</h4>
+                <h4 style="color:black;">MeDiTal</h4>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

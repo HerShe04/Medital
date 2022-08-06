@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Patient Management</title>
+    <title>MeDiTal</title>
     <link rel="stylesheet" type="text/css" href="style1.css">
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -25,7 +25,7 @@
             document.getElementById('message').innerHTML = 'Matched';
         } else {
             document.getElementById('message').style.color = '#f55252';
-            document.getElementById('message').innerHTML = 'Password fields doesnot match';
+            document.getElementById('message').innerHTML = '';
         }
     }
 
@@ -52,7 +52,7 @@
 
             <a class="navbar-brand js-scroll-trigger" href="#"
                 style="margin-top: 10px;margin-left:-65px;font-family: 'IBM Plex Sans', sans-serif; color:black;">
-                <h4> PATIENT MANAGEMENT SYSTEM</h4>
+                <h4>MeDiTal</h4>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

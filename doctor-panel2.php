@@ -8,7 +8,7 @@ if(isset($_GET['cancel']))
     $query=mysqli_query($con,"update appointmenttb set doctorStatus='0' where ID = '".$_GET['ID']."'");
     if($query)
     {
-      echo "<script>alert('Your appointment successfully cancelled');</script>";
+      echo "<script>alert('Patient successfully added');</script>";
     }
   }
   
@@ -32,7 +32,7 @@ if(isset($_GET['cancel']))
 
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#"></i> MeDiTal</a>
+        <a class="navbar-brand" href="#"></i>MeDiTal</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -95,13 +95,14 @@ button:hover {
         <div class="row">
             <div class="col-md-4" style="max-width:18%;margin-top: 3%;">
                 <div class="list-group" id="list-tab" role="tablist">
-                    <a class="list-group-item list-group-item-action active" href="#list-dash" role="tab"
-                        aria-controls="home" data-toggle="list">Dashboard</a>
+                    <a class="list-group-item list-group-item-action " href="#list-dash" role="tab" aria-controls="home"
+                        data-toggle="list">Dashboard</a>
                     <a class="list-group-item list-group-item-action" href="#list-app" id="list-app-list" role="tab"
                         data-toggle="list" aria-controls="home">Appointments</a>
                     <a class="list-group-item list-group-item-action" href="#list-pres" id="list-pres-list" role="tab"
                         data-toggle="list" aria-controls="home"> Prescription List</a>
-                    <a class="list-group-item list-group-item-action" href="doctor-panel2.php">Queue</a>
+                    <a class="list-group-item list-group-item-action active" href="#list-app" id="list-app-list"
+                        role="tab" data-toggle="list" aria-controls="home">Queue</a>
 
                 </div><br>
             </div>
@@ -138,8 +139,8 @@ button:hover {
                                     <th scope="col">Date</th>
                                     <th scope="col">Time</th>
                                     <th scope="col">Status</th>
-                                    <th scope="col">Med. History</th>
-                                    <th scope="col">Prescribe</th>
+                                    <th scope="col">Action</th>
+                                    <th scope="col"></th>
 
                                 </tr>
                             </thead>
@@ -184,9 +185,9 @@ button:hover {
 
 
                                         <a href="doctor-panel.php?ID=<?php echo $row['ID']?>&cancel=update"
-                                            onClick="return confirm('Are you sure you want to accept     this appointment ?')"
+                                            onClick="return confirm('Are you sure you want to accept this patient ?')"
                                             title="Cancel Appointment" tooltip-placement="top" tooltip="Remove"><button
-                                                class="btn btn-dark">View</button></a>
+                                                class="btn btn-dark">Accept</button></a>
                                         <?php } else {
 
                                 echo "Cancelled";
@@ -201,7 +202,7 @@ button:hover {
 
                                         <a href="prescribe.php?pid=<?php echo $row['pid']?>&ID=<?php echo $row['ID']?>&fname=<?php echo $row['fname']?>&lname=<?php echo $row['lname']?>&appdate=<?php echo $row['appdate']?>&apptime=<?php echo $row['apptime']?>"
                                             tooltip-placement="top" tooltip="Remove" title="prescribe">
-                                            <button class="btn btn-dark">Prescribe</button></a>
+                                            <button class="btn btn-dark">Delete</button></a>
                                         <?php } else {
 
                             echo "-";

@@ -37,6 +37,7 @@ if(isset($_POST['docsub1']))
 
 ?>
 <html lang="en">
+<title>Super Admin</title>
 
 <head>
 
@@ -53,8 +54,7 @@ if(isset($_POST['docsub1']))
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <a class="navbar-brand" href="#"> Patient Management
-            System</a>
+        <a class="navbar-brand" href="#"> MeDiTal</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -68,7 +68,7 @@ if(isset($_POST['docsub1']))
                 document.getElementById('message').innerHTML = 'Matched';
             } else {
                 document.getElementById('message').style.color = '#f55252';
-                document.getElementById('message').innerHTML = 'Password fields doesnot match';
+                document.getElementById('message').innerHTML = '';
             }
         }
 
@@ -118,7 +118,7 @@ if(isset($_POST['docsub1']))
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" style="font-size:20px; color:white;position:absolute;top:7px;left:1070px;"
-                        href="logout1.php"> Logout</a>
+                        href="index.php"> Logout</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"></a>

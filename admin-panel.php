@@ -92,6 +92,7 @@ function get_specs(){
 
 ?>
 <html lang="en">
+<title>Patient</title>
 
 <head>
 
@@ -111,8 +112,7 @@ function get_specs(){
 
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" style="" href="#">Patient Management
-            System</a>
+        <a class="navbar-brand" style="" href="#">MeDiTal</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -253,7 +253,7 @@ button:hover {
                                             <div class="col-md-8">
                                                 <select name="doctor" class="form-control" id="doctor"
                                                     required="required">
-                                                    <option value="" disabled selected>Select Hospital</option>
+                                                    <option value="" selected>Select Hospital</option>
 
 
                                                     <option value="1">Bir Hospital</option>

@@ -25,8 +25,8 @@ include('connect.php');
 
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" style="" href="#">Patient Management
-            System</a>
+        <a class="navbar-brand" style="" href="#">
+            MeDiTal</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -208,7 +208,7 @@ li a {
 <body>
 
 
-    <title>Web QR</title>
+    <title>Pharmacist</title>
 
 
     <script type="text/javascript" src="https://webqr.com/llqrcode.js"></script>

@@ -64,7 +64,7 @@ if(isset($_POST['prescribe']) && isset($_POST['pid']) && isset($_POST['ID']) && 
 
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#"> Patient Management
+        <a class="navbar-brand" href="#"> MeDiTal
             System</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -97,7 +97,7 @@ if(isset($_POST['prescribe']) && isset($_POST['pid']) && isset($_POST['ID']) && 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto" style="color:white;position:absolute; left:980px;">
                 <li class="nav-item">
-                    <a class="nav-link" style="color:white; font-size:17px; " href="logout1.php"> Logout</a>
+                    <a class="nav-link" style="color:white; font-size:17px; " href="index.php"> Logout</a>
 
                 </li>
                 <li class="nav-item">

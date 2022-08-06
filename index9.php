@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <?php 
-
+include('func.php');  
+include('newfunc.php');
+include('connect.php');
 ?>
 <html lang="en">
 
@@ -13,6 +15,7 @@
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
+
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
         integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
@@ -69,10 +72,143 @@
         </div>
     </nav>
 </head>
-< <body>
+<style type="text/css">
+button:hover {
+    cursor: pointer;
+}
+
+#inputbtn:hover {
+    cursor: pointer;
+}
 
 
-    <title>Payment</title>
+body {
+    width: 100%;
+    text-align: center;
+}
+
+img {
+    border: 0;
+}
+
+#main {
+    margin: 15px auto;
+    background: white;
+    overflow: auto;
+    width: 100%;
+}
+
+#header {
+    background: white;
+    margin-bottom: 15px;
+}
+
+#mainbody {
+    background: white;
+    width: 100%;
+    display: none;
+}
+
+#footer {
+    background: white;
+}
+
+#v {
+    width: 320px;
+    height: 240px;
+}
+
+#qr-canvas {
+    display: none;
+}
+
+#qrfile {
+    width: 320px;
+    height: 240px;
+}
+
+#mp1 {
+    text-align: center;
+    font-size: 35px;
+}
+
+#imghelp {
+    position: relative;
+    left: 0px;
+    top: -160px;
+    z-index: 100;
+    font: 18px arial, sans-serif;
+    background: #f0f0f0;
+    margin-left: 35px;
+    margin-right: 35px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+}
+
+.selector {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    margin-bottom: -5px;
+}
+
+#outdiv {
+    width: 320px;
+    height: 240px;
+    border: solid;
+    border-width: 3px 3px 3px 3px;
+}
+
+#result {
+    border: solid;
+    border-width: 1px 1px 1px 1px;
+    padding: 20px;
+    width: 20%;
+    height: 20%;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}
+
+ul {
+    margin-bottom: 0;
+    margin-right: 40px;
+}
+
+li {
+    display: inline;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    font-weight: bold;
+    border-right: 1px solid #333333;
+}
+
+li a {
+    text-decoration: none;
+    color: black;
+}
+
+#footer a {
+    color: black;
+}
+
+.tsel {
+    padding: 0;
+}
+</style>
+
+
+
+
+
+
+
+<body>
+
+
+    <title>Scanner</title>
 
 
     <script type="text/javascript" src="https://webqr.com/llqrcode.js"></script>
@@ -85,12 +221,10 @@
                 <g:plusone size="medium"></g:plusone>
             </div>
             <p id="mp1">
-            <h1>
-                <center> Payment</center>
-            </h1>
+                QR Code scanner
             </p>
-
-
+            <a href="index7.php"
+                style="position:absolute; top:5.10em; left:3em; font-size:70px; text-decoration:none; ">ㅤㅤㅤㅤㅤㅤㅤㅤ</a>
         </div>
         <div id="mainbody">
             <table class="tsel" border="0" width="100%">
@@ -98,32 +232,37 @@
                     <td valign="top" align="center" width="50%">
                         <table class="tsel" border="0">
                             <tr>
-
-                            </tr>
-                            <tr>
-                                <td colspan="2" align="center">
-                                    <div id="outdiv">
-                                    </div>
-                                </td>
-                            </tr>
-                            <img src="images/pay.png" style="cursor:pointer;">
-                        </table>
+                                <td><img class="selector" id="webcamimg" src="https://webqr.com/vid.png"
+                                        onclick="setwebcam()"></td <td><img class="selector" id="qrimg"
+                                    src="https://webqr.com/cam.png" onclick="setimg()" align="right" />
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="3" align="center">
+                    <td colspan="2" align="center">
+                        <div id="outdiv">
+                        </div>
                     </td>
                 </tr>
-                <tr>
-                    <td colspan="3" align="center">
-                        <div id="result"></div>
-                    </td>
-                </tr>
+            </table>
+            </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <div id="result"></div>
+                </td>
+            </tr>
             </table>
         </div>&nbsp;
 
     </div>
     <canvas id="qr-canvas" width="800" height="600"></canvas>
+    <script type="text/javascript">
+    load();
+    </script>
 
 
 
@@ -149,6 +288,6 @@
 
 
 
-    </body>
+</body>
 
 </html>
